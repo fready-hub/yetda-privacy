@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>옜다 개인정보처리방침</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: system-ui, -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+         line-height: 1.7; max-width: 760px; margin: 0 auto; padding: 24px 18px 64px; color: #1c1c1e; }
+  h1 { font-size: 1.6rem; margin-bottom: 4px; }
+  h2 { font-size: 1.15rem; margin-top: 32px; border-bottom: 1px solid #ddd; padding-bottom: 6px; }
+  h3 { font-size: 1.02rem; margin-top: 18px; }
+  .date { color: #666; font-size: .9rem; margin-bottom: 24px; }
+  ul { padding-left: 20px; }
+  li { margin: 4px 0; }
+  a { color: #0a7cff; word-break: break-all; }
+  .note { background: rgba(10,124,255,.08); border-radius: 8px; padding: 12px 14px; }
+  table { border-collapse: collapse; width: 100%; margin-top: 8px; font-size: .95rem; }
+  th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: rgba(0,0,0,.04); }
+  footer { margin-top: 40px; color: #888; font-size: .85rem; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e6e6e6; background: #111; }
+    h2 { border-color: #333; } .date, footer { color: #999; }
+    th, td { border-color: #333; } th { background: rgba(255,255,255,.06); }
+  }
+</style>
+</head>
+<body>
+<h1>옜다 개인정보처리방침</h1>
+<div class="date">시행일: 2026년 8월 11일</div>
+
+<p>옜다(이하 ‘앱’)는 받은 기프티콘·상품권을 한곳에 모아 <strong>만료 전에 알려주는</strong> 앱입니다.
+본 방침은 앱이 어떤 정보를 다루고 보호하는지 설명합니다.</p>
+
+<div class="note">
+핵심 요약: 등록한 <strong>쿠폰 정보와 쿠폰 이미지는 사용자의 기기에 저장</strong>되며,
+<strong>당사(개발자)는 이를 수집하거나 열람하지 않습니다</strong>.
+사진 접근 권한은 <strong>기기 안에서 쿠폰으로 보이는 사진을 찾기 위해서만</strong> 쓰이고,
+<strong>사진을 기기 밖으로 전송하지 않습니다</strong>.
+기기 밖으로 나가는 것은 <strong>앱 오류 진단 정보</strong>뿐입니다.
+</div>
+
+<h2>1. 수집·저장하는 정보</h2>
+
+<h3>가. 사용자가 등록하는 쿠폰 정보</h3>
+<ul>
+  <li>브랜드, 금액, 유효기간, 발급사, 사용 여부</li>
+  <li><strong>사용자 기기 내부에 저장</strong>되며 당사 서버로 전송되지 않습니다. 당사는 접근할 수 없습니다.</li>
+  <li>앱 내에서 개별 쿠폰을 삭제할 수 있습니다.</li>
+  <li>이 앱에는 <strong>회원가입·로그인·계정이 없습니다.</strong></li>
+</ul>
+
+<h3>나. 쿠폰 이미지 (바코드 포함)</h3>
+<ul>
+  <li>등록한 쿠폰의 이미지는 <strong>기기 내부에 암호화(AES-GCM)되어 저장</strong>됩니다.</li>
+  <li>암호화 키는 기기의 보안 저장소에 보관되며, <strong>이미지는 기기 밖으로 전송되지 않습니다.</strong></li>
+  <li><strong>바코드 번호 자체를 저장하지 않습니다.</strong> 앱의 저장 구조에 바코드 번호를 담는 항목이 없습니다.</li>
+</ul>
+
+<h3>다. 사진(미디어) 접근 권한</h3>
+<ul>
+  <li>사용자가 허용한 경우에만, 최근 사진 중 <strong>쿠폰으로 보이는 것을 찾아 등록을 제안</strong>하기 위해 읽습니다.</li>
+  <li><strong>읽은 사진은 기기 밖으로 전송되지 않고 저장되지도 않습니다.</strong> 사용자가 등록을 선택한 이미지만 위 ‘나’항에 따라 기기에 보관됩니다.</li>
+  <li>권한을 허용하지 않아도 앱의 나머지 기능은 그대로 쓸 수 있습니다.</li>
+</ul>
+
+<h3>라. 문자 인식(OCR)</h3>
+<ul>
+  <li>쿠폰의 유효기간·금액·브랜드를 읽는 처리는 <strong>전부 기기 안에서(온디바이스) 수행</strong>됩니다.</li>
+  <li>인식을 위해 이미지를 외부 서버로 보내지 않습니다.</li>
+</ul>
+
+<h3>마. 자동으로 처리되는 정보 (오류 진단)</h3>
+<ul>
+  <li><strong>Google Firebase Crashlytics</strong>: 앱이 비정상 종료되거나 오류가 났을 때
+      오류 내용·발생 위치·기기 모델·운영체제 버전·앱 버전·설치 식별자를 수집하여 안정성 개선에 사용합니다.</li>
+  <li>오류 정보에 <strong>쿠폰 번호로 보이는 긴 숫자열은 전송 전에 가려집니다.</strong></li>
+  <li>이 앱은 <strong>광고를 표시하지 않으며 광고 식별자를 수집하지 않습니다.</strong>
+      사용 행태 분석(Google Analytics)도 사용하지 않습니다.</li>
+</ul>
+
+<h3>바. 앱 사용 기록 (기기 내부)</h3>
+<ul>
+  <li>기능 개선을 위해 <strong>등록을 시작·완료·중단한 시점과 경로</strong>를 기기 안에 기록합니다.</li>
+  <li>이 기록은 자동으로 전송되지 않습니다. <strong>사용자가 직접 ‘계측 내보내기’를 실행해 보내는 경우에만</strong> 개발자에게 전달됩니다.</li>
+</ul>
+
+<h3>사. 운영체제 자동 백업</h3>
+<ul>
+  <li>사용자가 기기에서 백업을 켜 둔 경우, Android 운영체제가 앱 데이터를
+      <strong>사용자 본인의 Google 계정</strong>에 백업할 수 있습니다.</li>
+  <li>이 백업은 사용자 본인의 계정에만 저장되며 Google의 약관·개인정보처리방침에 따라 처리됩니다.
+      <strong>당사는 이 백업에 접근할 수 없습니다.</strong></li>
+  <li>기기 설정에서 백업을 끄거나 백업 데이터를 삭제할 수 있습니다.</li>
+</ul>
+
+<h2>2. 이용 목적</h2>
+<ul>
+  <li>쿠폰 만료 전 알림 제공</li>
+  <li>등록한 쿠폰의 조회·관리</li>
+  <li>앱 오류 진단 및 안정성 개선</li>
+</ul>
+
+<h2>3. 보유 기간과 삭제</h2>
+<table>
+  <tr><th>정보</th><th>어디에</th><th>삭제 방법</th></tr>
+  <tr><td>쿠폰 정보·이미지·사용 기록</td><td>기기 내부</td><td>앱에서 개별 삭제, 또는 <strong>앱을 삭제하면 전부 삭제</strong></td></tr>
+  <tr><td>오류 진단 정보</td><td>Firebase Crashlytics</td><td>Google 정책에 따라 일정 기간 후 자동 삭제(통상 90일)</td></tr>
+  <tr><td>운영체제 자동 백업</td><td>사용자의 Google 계정</td><td>기기 설정 &gt; 백업에서 삭제</td></tr>
+</table>
+
+<h2>4. 제3자 제공</h2>
+<p>당사는 이용자의 정보를 제3자에게 판매하거나 제공하지 않습니다.
+오류 진단을 위해 Google(Firebase Crashlytics)이 처리자로서 위 ‘1-마’의 정보를 처리합니다.</p>
+
+<h2>5. 앱이 요청하는 권한</h2>
+<table>
+  <tr><th>권한</th><th>목적</th><th>거부 시</th></tr>
+  <tr><td>사진 및 동영상</td><td>쿠폰으로 보이는 사진을 찾아 등록 제안</td><td>자동 제안만 사용할 수 없고, 직접 등록은 가능</td></tr>
+  <tr><td>알림</td><td>유효기간 만료 전 알림</td><td>알림을 받지 못함</td></tr>
+</table>
+
+<h2>6. 아동의 개인정보</h2>
+<p>본 앱은 만 14세 미만 아동을 대상으로 하지 않으며, 아동의 개인정보를 의도적으로 수집하지 않습니다.</p>
+
+<h2>7. 방침 변경</h2>
+<p>본 방침이 변경되는 경우 이 페이지에 개정 내용과 시행일을 게시합니다.</p>
+
+<h2>8. 문의</h2>
+<p>개인정보 관련 문의: <a href="mailto:shinyoungju@gmail.com">shinyoungju@gmail.com</a></p>
+
+<footer>옜다 · 최종 수정 2026년 8월 11일</footer>
+</body>
+</html>
