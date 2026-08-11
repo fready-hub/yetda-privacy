@@ -101,13 +101,33 @@
   <li>앱 오류 진단 및 안정성 개선</li>
 </ul>
 
-<h2>3. 보유 기간과 삭제</h2>
-<table>
-  <tr><th>정보</th><th>어디에</th><th>삭제 방법</th></tr>
-  <tr><td>쿠폰 정보·이미지·사용 기록</td><td>기기 내부</td><td>앱에서 개별 삭제, 또는 <strong>앱을 삭제하면 전부 삭제</strong></td></tr>
-  <tr><td>오류 진단 정보</td><td>Firebase Crashlytics</td><td>Google 정책에 따라 일정 기간 후 자동 삭제(통상 90일)</td></tr>
+<h2 id="delete">3. 보유 기간과 삭제 요청</h2>
 
+<p><strong>옜다</strong>는 계정을 만들지 않습니다. 등록한 쿠폰과 이미지는 서버로 전송되지 않고
+이용자의 기기 안에만 저장되므로, <strong>이용자가 직접 전부 삭제할 수 있습니다.</strong></p>
+
+<h3>삭제하는 방법</h3>
+<ol>
+  <li><strong>쿠폰 하나만 지우려면</strong> — 앱에서 해당 쿠폰을 열고 삭제합니다.</li>
+  <li><strong>전부 지우려면</strong> — 휴대폰에서 <strong>옜다 앱을 삭제</strong>합니다.
+      쿠폰 정보·이미지·사용 기록·앱 사용 기록이 기기에서 함께 삭제되며, 서버에는 남는 것이 없습니다.
+      (설정 &gt; 애플리케이션 &gt; 옜다 &gt; 저장공간 &gt; <strong>데이터 삭제</strong>로도 같은 결과가 됩니다.)</li>
+  <li><strong>오류 진단 정보의 삭제를 요청하려면</strong> —
+      <a href="mailto:fready.shin@gmail.com?subject=%5B%EC%98%9C%EB%8B%A4%5D%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%82%AD%EC%A0%9C%20%EC%9A%94%EC%B2%AD">fready.shin@gmail.com</a>
+      으로 요청하시면 확인 후 처리하고 결과를 회신합니다.</li>
+</ol>
+
+<h3>삭제되는 정보와 보관 기간</h3>
+<table>
+  <tr><th>정보</th><th>어디에</th><th>삭제</th><th>보관 기간</th></tr>
+  <tr><td>쿠폰 정보·이미지·사용 기록</td><td>기기 내부</td><td>앱에서 개별 삭제, 또는 <strong>앱을 삭제하면 전부 삭제</strong></td><td>삭제 즉시 사라짐. 서버에 사본이 없음</td></tr>
+  <tr><td>앱 사용 기록(등록 시작·중단 등)</td><td>기기 내부</td><td>앱을 삭제하면 함께 삭제</td><td>삭제 즉시 사라짐</td></tr>
+  <tr><td>오류 진단 정보(비정상 종료 로그·기기 상태·설치 식별자)</td><td>Firebase Crashlytics</td><td>위 3번으로 요청</td><td>Google 정책에 따라 <strong>통상 90일 후 자동 삭제</strong></td></tr>
 </table>
+
+<p><strong>오류 진단 정보는 이용자를 식별하지 않습니다.</strong> 이름·이메일·전화번호를 수집하지 않으므로
+어느 기록이 누구의 것인지 특정할 수 없습니다. 삭제를 요청하실 때는 기기 모델과 발생 시점을
+알려주시면 확인에 도움이 됩니다.</p>
 
 <h2>4. 제3자 제공</h2>
 <p>당사는 이용자의 정보를 제3자에게 판매하거나 제공하지 않습니다.
